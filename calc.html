@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <input type="number" placeholder="Number1" id="n1">
+    <br>
+    <br>
+    <input type="number" placeholder="Number2" id="n2">
+    <br>
+    <br>
+    <button id="add">+</button>
+    <button id="sub">-</button>
+    <button id="mul">*</button>
+    <button id="div">/</button>
+    <button id="per">%</button>
+    <br>
+    <br>
+    <input type="number" readonly id="result">
+</div>
+
+    <script>
+        let num1=document.getElementById("n1")
+        let num2=document.getElementById("n2")
+        let res=document.getElementById("result")
+        
+
+        document.getElementById("add").addEventListener
+        ("click",function(){
+            res.value = parseInt(num1.value)+parseInt(num2.value);
+        });
+        document.getElementById("sub").addEventListener("click",function(){
+            res.value = parseInt(num1.value)-parseInt(num2.value);
+        });
+        document.getElementById("mul").addEventListener("click",function(){
+            res.value = parseInt(num1.value)*parseInt(num2.value);
+        });
+        document.getElementById("div").addEventListener("click",function(){
+            res.value = parseInt(num1.value)/parseInt(num2.value);
+        });
+        document.getElementById("per").addEventListener("click",function(){
+            res.value = parseInt(num1.value)%parseInt(num2.value);
+        });
+    </script>
+
+
+    
+</body>
+</html>
